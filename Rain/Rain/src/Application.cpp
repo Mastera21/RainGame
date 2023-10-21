@@ -19,6 +19,8 @@ int32_t Application::init() {
 
     _endGame = true;
 
+    srand(NULL);
+
 	return EXIT_SUCCESS;
 }
 void Application::deinit() {
