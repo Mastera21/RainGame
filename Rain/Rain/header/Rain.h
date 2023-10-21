@@ -21,7 +21,7 @@ public:
 	int32_t init(const sf::RenderWindow& window);
 	void deinit();
 	void draw(sf::RenderWindow& window);
-	void handleEvent(sf::RenderWindow& window, bool& endGame);
+	void handleEvent(const sf::RenderWindow& window, bool& endGame);
 private:
 	void resetRain(const sf::RenderWindow& window);
 private:

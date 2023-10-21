@@ -10,14 +10,14 @@
 int32_t Player::init(const sf::RenderWindow& window) {
 	_player.setRadius(15.f);
 	_player.setFillColor(sf::Color::Yellow);
-	_player.setPosition(window.getSize().x / 2.f - 450.f, window.getPosition().y + 625.f);
+	_player.setPosition(window.getSize().x - window.getSize().x, window.getPosition().y + 450.f);
 
 	return EXIT_SUCCESS;
 }
-void Player::deinit() {
 
-}
-inline void Player::move() {
+void Player::deinit() {}
+
+void Player::move() {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
 		_player.move(-_speed, 0.f);
 	}
@@ -25,7 +25,7 @@ inline void Player::move() {
 		_player.move(_speed, 0.f);
 	}
 }
-inline void Player::collision(const sf::RenderWindow& window) {
+void Player::collision(const sf::RenderWindow& window) {
 	if (_player.getPosition().x < 0.f) {
 		_player.setPosition(0.f, _player.getPosition().y);
 	}
@@ -33,12 +33,12 @@ inline void Player::collision(const sf::RenderWindow& window) {
 		_player.setPosition(window.getSize().x - _player.getGlobalBounds().width, _player.getPosition().y);
 	}
 }
-inline void Player::collideWithRain(sf::RectangleShape& rain) {
+void Player::collideWithRain(sf::RectangleShape& rain) {
 	if (rain.getGlobalBounds().intersects(_player.getGlobalBounds())) {
 		_health--;
 	}
 }
-inline void Player::checkForHealth(bool& endGame) {
+void Player::checkForHealth(bool& endGame) {
 	if (_health <= 0) {
 		endGame = false;
 	}

@@ -19,17 +19,17 @@ public:
 	void draw(sf::RenderWindow& window);
 	void handleEvent(const sf::RenderWindow& window, sf::RectangleShape& rain, bool& endGame);
 
-	int getHealth()const;
-
+	int getHealth() const;
 	sf::CircleShape getPlayer() const;
+
 private:
 	void move();
 	void collision(const sf::RenderWindow& window);
-	void collideWithRain(sf::RectangleShape& rain);
-	void checkForHealth(bool& endGame);
+	inline void collideWithRain(sf::RectangleShape& rain);
+	inline void checkForHealth(bool& endGame);
 private:
 	sf::Vector2f _velocity;
-	float _speed = 0.02f;
+	float _speed = 0.04f;
 	int _health = 100;
 private:
 	sf::CircleShape _player;

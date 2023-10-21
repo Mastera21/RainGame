@@ -50,21 +50,21 @@ void Rain::deinit() {
     _player.deinit();
     _walls.deinit();
 }
-inline void Rain::resetRain(const sf::RenderWindow& window) {
-    //This function return rain back to the top on window when hit the ground
+void Rain::resetRain(const sf::RenderWindow& window) {
+    //This function return rain back to the top on window when hits the ground
     for (int i = 0; i < numLines; ++i) {
         if (_rain[i].getPosition().y > window.getSize().y) {
             _rain[i].setPosition((float)(rand() % window.getSize().x), (float)(rand() % -400 + (-400)));
         }
     }
 }
-void Rain::handleEvent(sf::RenderWindow& window, bool& endGame) {
+void Rain::handleEvent(const sf::RenderWindow& window, bool& endGame) {
     for (int i = 0; i < numLines; ++i) {
         _speed = rand() % 20;
         _rain[i].move(0.f, (float)(_speed));
 
         if (_isStartButtonPressed) {
-             _walls.handleEvent(window, _rain[i]);
+            _walls.handleEvent(window, _rain[i]);
             _player.handleEvent(window, _rain[i], endGame);
             _end.handleEvent(_player.getPlayer(), endGame);
         }else {

@@ -21,6 +21,7 @@ public:
 	static void run() {
 		Get().main();
 	}
+
 private:
 	Application() = default;
 	int32_t init();
