@@ -1,6 +1,7 @@
 # RainGame
 
-This is simple rain game.
+This is a simple rain game made in a couple days.\
+The goal is to reach the red box. 
 
 ## Development:
 -Developed on Windows 10.\
@@ -8,7 +9,7 @@ This is simple rain game.
 
 ## Run project:
 If you want to develop the project open Rain folder in main directory and open Rain.sln.\
-To see what is in the project open (.exe) file, path is -> build\bin\Release-windows-x86_64\Rain\Rain.exe.\
+To see what is in the project open (.exe) file, path is -> build\bin\Release-windows-x86_64\Rain\Rain.exe.
 
 If someting happened with project files or cant open project files type "cmd" on path directory and type the following commands:
 
@@ -24,3 +25,10 @@ If someting happened with project files or cant open project files type "cmd" on
 -Lua.\
 -Premake (Link for Primake: https://premake.github.io/). \
 -SFML (Link for SFML: https://www.sfml-dev.org/).
+
+
+## Preview
+1.
+![ezgif com-video-to-gif](https://github.com/Mastera21/RainGame/assets/68899725/0f799970-ea0d-4f11-bbb1-17943032190b)
+## Gameplay
+![ezgif com-video-to-gif (1)](https://github.com/Mastera21/RainGame/assets/68899725/980695e1-9fad-4a38-9d5d-573798c06e52)
